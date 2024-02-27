@@ -1,16 +1,16 @@
 # Assignments Week 6
 # Introduction
-The goal of this assignment is to navigate through the measurement file from an HPLC-MS/MS analysis. This is a follow-up to last week’s assignment, and includes the combination of chromatography, MS1 and MS2 spectra. The aim is to get familiar with the information contained in each of those steps comprising an HPLC-MS/MS experiment. You will use the S-layer glycoprotein (CSG, UniProt ID P25062) as an example, but this approach can be applied to any protein within the proteome.
-# Input data
-An .mzML file, the standard data format for HPLC-MS/MS runs, has been uploaded to myCourses. In addition, you can download the reference proteome for Haloferax volcanii, the model archaeon that has been analyzed in this HPLC-MS/MS run from UniProt.
+This assignment is a continuation of last week, aiming to gain further familiarity with the basics of mass spectrometric data analysis. Rather than looking at a single spectrum, you will now look at a whole LC-MS run, combining information from the chromatography, MS1 spectra, and MS2 spectra. In the end, you might identify your favorite protein in some of the spectra.
+# Input data	
+The same .idx.gz file with mass spectrometric raw data (from dataset PXD006121) as last week can be used. In addition, you will need the reference proteome for Neisseria meningitidis, which you have used in the previous weeks as well.
 # Tasks and output files
-1)	Plot the total ion chromatogram (TIC), i.e. the intensity of all ions over time.
-2)	Perform an in silico digest of CSG, using trypsin, filter the resulting peptides to get peptides with a length between 5 and 40 amino acids. How many of those peptides can be found (on the MS1 level, assuming charges from 2 to 4) in the HPLC-MS/MS run? For each of those peptides, extract the ion chromatogram. Plot all extracted ion chromatograms in one graph.
-3)	Across the elution peak corresponding to the peptide-ion VTAHILSVGR2+, check if you can find an MS2 spectrum that selected the corresponding m/z for fragmentation. Plot that spectrum.
-4)	For the MS2 spectrum from 3), check how many fragment ions (b- and y-ions) you can find? Try to plot an annotated spectrum, e.g. using different colors for b-ions, y-ions, and other ions.
+1)	Choose your favorite protein from N. meningitidis. Perform an in silico tryptic digest for that protein, and calculate the m/z for all resulting peptides with a peptide length of 5 – 40. Assume that peptide ions can have charges ranging from 2 - 4.
+2)	Extract the ion chromatogram for each of the peptide ions calculated in 1), and plot them (ideally in one graph, but separate graphs are fine as well, especially if the max. intensities are very different).
+3)	For all peptides that have a distinct elution peak in the extracted ion chromatogram, check if you can find an MS2 spectrum corresponding to that peptide ion within the elution window.
+4)	For at least one MS2 spectrum for each peptide in 3), calculate the fragment ions (b- and y-ions) and match them against the measured ions in the MS2 spectrum. Plot the annotated spectrum that highlights (and ideally labels) all matching peaks.
 5)	Make sure to comment your code, so that others can read and understand it easily. 
 6)	Create a README file describing how to run your code. Include requirements (e.g. Python packages that need to be installed) in that description, or as a separate requirements.txt file.
-7)	Commit all your input files, scripts, and result files to your GitHub Classroom repository.
+7)	Commit all your scripts and result files to your GitHub Classroom repository.
 # Submission
-You must submit the assignment through GitHub Classroom by 8 am Mar 2 to get full credit. 
+You must submit the assignment through GitHub Classroom (or MyCourses) by 8 am February 29 to get full credit. 
 
